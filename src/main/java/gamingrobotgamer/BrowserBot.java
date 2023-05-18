@@ -19,6 +19,11 @@ public class BrowserBot {
         return driver.findElements(By.type(name));
     }
 
+    // Wait
+    public void wait(int seconds) {
+        
+    }
+
     // Main
     public static void main(String[] args) throws Exception {
         WebDriver driver = new ChromeDriver();
