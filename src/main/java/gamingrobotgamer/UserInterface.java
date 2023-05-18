@@ -9,18 +9,21 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
-    // Open UI
+    WebDriver driver = new ChromeDriver();
+
     public void newUI() {
 
     }
 
-    // Close UI
     public void killUI() {
         
     }
 
+    public void display() {
+        
+    }
+
     public static void main(String[] args) throws Exception {
-        WebDriver driver = new ChromeDriver();
         
     }
 }

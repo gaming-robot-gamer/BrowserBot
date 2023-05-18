@@ -9,29 +9,49 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TabManager {
-    // Open Tab
+    WebDriver driver = new ChromeDriver();
+
     public void openTab(String url) {
-        
+
     }
 
-    // Save Tab group
     public void saveTabGroup(String[] urls) {
 
     }
 
-    // Open Tab Group
     public void openTabGroup(String[] groupName, int index) {
 
     }
 
-    // Close Tab
     public void closeTab(String url) {
 
     }
 
-    // Main
+    public void closeTabGroup(String[] groupName) {
+
+    }
+
+    public void reload() {
+
+    }
+
+    public void reload(boolean spam) {
+        if (spam) {
+            while (true) {
+                reload();
+            }
+        } else {
+            reload();
+        }
+    }
+
+    public void reload(int times) {
+        for (int i = 0; i < times; i++) {
+            reload();
+        }
+    }
+
     public static void main(String[] args) throws Exception {
-        WebDriver driver = new ChromeDriver();
-        
+
     }
 }

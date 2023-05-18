@@ -7,26 +7,30 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.List;
 
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class BrowserBot {
-    // Find a Single Element
-    public void find(String name, String type) {
-        return driver.findElement(By.type(name));
-    }
+    static WebDriver driver = new ChromeDriver();
 
-    // Find all elements
-    public void findAll(String name, String type) {
-        return driver.findElements(By.type(name));
-    }
+    /*
+     * public void find(String name, String elementType) {
+     * return driver.findElement(By.elementType(name));
+     * }
+     * 
+     * public void findAll(String name, String elementType) {
+     * return driver.findElements(By.elementType(name));
+     * }
+     */
 
-    // Wait
     public void wait(int seconds) {
-        
+        try {
+            TimeUnit.SECONDS.sleep(seconds);
+        } catch (InterruptedException e) {
+            System.out.println("Error: " + e);
+        }
     }
 
-    // Main
     public static void main(String[] args) throws Exception {
-        WebDriver driver = new ChromeDriver();
         // Open new tab
         driver.get("https://google.com");
     }
