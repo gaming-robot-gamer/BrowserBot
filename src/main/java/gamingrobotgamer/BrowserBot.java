@@ -12,17 +12,18 @@ import java.util.concurrent.TimeUnit;
 public class BrowserBot {
     static WebDriver driver = new ChromeDriver();
 
-    /*
-     * public void find(String name, String elementType) {
-     * return driver.findElement(By.elementType(name));
-     * }
-     * 
-     * public void findAll(String name, String elementType) {
-     * return driver.findElements(By.elementType(name));
-     * }
-     */
+    public void find(String name, String elementType) {
+        // Find a single element
+        // return driver.findElement(By.elementType(name));
+    }
+
+    public void findAll(String name, String elementType) {
+        // Find all elements of a specified type
+        // return driver.findElements(By.elementType(name));
+    }
 
     public void wait(int seconds) {
+        // Wait the specified amount of seconds
         try {
             TimeUnit.SECONDS.sleep(seconds);
         } catch (InterruptedException e) {
